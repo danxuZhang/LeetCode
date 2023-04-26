@@ -28,5 +28,6 @@ echo "## ${msg}\n" >> $md_dir
 echo "\`\`\` $lang" >> $md_dir
 cat  $code_file >> $md_dir
 echo "\`\`\`\n" >> $md_dir
+echo "" >> $md_dir
 
 echo "Updated $md_dir"

@@ -8,7 +8,7 @@ fi
 n=$1
 msg=$2
 lang="cpp"
-code_file=$(basename $(find . -type f -maxdepth 1 -name "1.*.$lang"))
+code_file=$(basename $(find ./code/ -type f -maxdepth 1 -name "$n.*.$lang"))
 md_file=$(echo $code_file | sed "s/\.$lang$/.md/")
 md_path="notes/$md_file"
 

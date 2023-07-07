@@ -24,10 +24,10 @@ if [ ! -e $md_path ]; then
     echo "Created new Markdown file $md_path"
 fi
 
-echo "## ${msg}\n" >> $md_path
+echo "## ${msg}" >> $md_path
 echo "\`\`\` $lang" >> $md_path
 cat  $code_file >> $md_path
-echo "\`\`\`\n" >> $md_path
+echo "\`\`\`" >> $md_path
 echo "" >> $md_path
 
 echo "Updated $md_path"

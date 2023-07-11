@@ -20,7 +20,7 @@ mkdir -p notes
 
 if [ ! -e $md_path ]; then
     touch $md_path
-    echo "# ${code_file%.*}\n" > $md_path
+    echo "# ${code_file%.*}" > $md_path
     echo "Created new Markdown file $md_path"
 fi
 

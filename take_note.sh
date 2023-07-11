@@ -12,19 +12,20 @@ code_file=$(basename $(find . -type f -maxdepth 1 -name "$n.*.$lang"))
 md_file=$(echo $code_file | sed "s/\.$lang$/.md/")
 md_path="notes/$md_file"
 
-echo $code_file
-echo $md_file
-echo $md_path
+echo "Code file: $code_file"
+echo "Markdown notes file: $md_file ($md_path)"
 
 mkdir -p notes
 
 if [ ! -e $md_path ]; then
     touch $md_path
     echo "# ${code_file%.*}" > $md_path
+    echo "" >> $md_path
     echo "Created new Markdown file $md_path"
 fi
 
 echo "## ${msg}" >> $md_path
+echo "" >> $md_path
 echo "\`\`\` $lang" >> $md_path
 cat  $code_file >> $md_path
 echo "\`\`\`" >> $md_path

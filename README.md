@@ -1,4 +1,3 @@
 # LeetCode
-LeetCode Questions and Notes
 
-Reference: https://neetcode.io/practice
+LeetCode Questions and Notes

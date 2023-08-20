@@ -6,15 +6,15 @@
 
 // @lc code=start
 class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        unordered_map<int, int> umap;  // {target-num, num_index}
+  public:
+    vector<int> twoSum(vector<int> &nums, int target) {
+        unordered_map<int, int> umap; // {target-num, num_index}
 
         for (int i = 0; i < nums.size(); ++i) {
             if (umap.find(nums[i]) != umap.end()) {
                 return {umap[nums[i]], i};
             } else {
-                umap[target-nums[i]] = i;
+                umap[target - nums[i]] = i;
             }
         }
 
@@ -22,4 +22,3 @@ public:
     }
 };
 // @lc code=end
-

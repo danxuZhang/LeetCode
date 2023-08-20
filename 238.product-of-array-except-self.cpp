@@ -6,8 +6,8 @@
 
 // @lc code=start
 class Solution {
-public:
-    vector<int> productExceptSelf(vector<int>& nums) {
+  public:
+    vector<int> productExceptSelf(vector<int> &nums) {
         int n = nums.size();
         vector<int> res(n, 1);
 
@@ -18,7 +18,7 @@ public:
         }
 
         int suffix = 1;
-        for (int i = n-1; i >= 0; --i) {
+        for (int i = n - 1; i >= 0; --i) {
             res[i] *= suffix;
             suffix *= nums[i];
         }
@@ -27,4 +27,3 @@ public:
     }
 };
 // @lc code=end
-
